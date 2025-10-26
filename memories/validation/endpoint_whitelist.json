@@ -1,0 +1,18 @@
+{
+  "immutable": true,
+  "description": "Official Hyperliquid API endpoints - DO NOT MODIFY",
+  "last_updated": "2025-10-25",
+  "official_endpoints": [
+    "https://api.hyperliquid.xyz",
+    "https://api.hyperliquid-testnet.xyz"
+  ],
+  "allowed_paths": [
+    "/info"
+  ],
+  "validation_rules": {
+    "require_https": true,
+    "allow_http": false,
+    "reject_on_mismatch": true
+  },
+  "documentation": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api"
+}

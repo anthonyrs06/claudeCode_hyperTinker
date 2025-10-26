@@ -1,0 +1,68 @@
+# Hyperliquid Multi-Agent System Configuration
+# This file contains default configuration values
+
+api:
+  hyperliquid:
+    official_endpoints:
+      mainnet: "https://api.hyperliquid.xyz"
+      testnet: "https://api.hyperliquid-testnet.xyz"
+    default_environment: "mainnet"
+    timeout_seconds: 10
+    retry_attempts: 3
+    retry_backoff_seconds: 1
+
+  claude:
+    models:
+      orchestrator: "claude-sonnet-4-5-20250929"
+      agent: "claude-haiku-4-5-20250925"
+    max_tokens: 4096
+    temperature: 0.7
+
+rate_limiting:
+  requests_per_minute: 500
+  burst_capacity: 50
+  enforcement: "centralized"  # centralized in fetch skill
+  backoff_strategy: "exponential"
+
+memory:
+  base_path: "./memories"
+  cache:
+    price_ttl_seconds: 300  # 5 minutes
+    candles_ttl_seconds: 86400  # 24 hours (immutable, low priority cleanup)
+    metadata_ttl_seconds: 3600  # 1 hour
+  concurrency_strategy: "last_write_wins"  # See MEMORY_CONCURRENCY_ANALYSIS.md
+  cleanup:
+    enabled: true
+    interval_seconds: 3600  # Run cleanup every hour
+
+agent_pool:
+  min_agents: 5
+  max_agents: 50
+  scaling:
+    scale_up_threshold: 100  # requests in queue
+    scale_down_idle_seconds: 300
+    cooldown_seconds: 60
+  health_check_interval_seconds: 30
+
+logging:
+  level: "INFO"
+  format: "json"
+  output: "stdout"
+  include_timestamps: true
+  include_agent_id: true
+
+validation:
+  endpoint_whitelist_path: "./memories/validation/endpoint_whitelist.json"
+  schema_validation_enabled: true
+  strict_mode: true  # Reject any non-official endpoints
+
+monitoring:
+  enabled: false  # Enable in production
+  prometheus_port: 9090
+  metrics:
+    - "request_count"
+    - "request_latency"
+    - "cache_hit_rate"
+    - "api_call_count"
+    - "token_usage"
+    - "cost_per_request"

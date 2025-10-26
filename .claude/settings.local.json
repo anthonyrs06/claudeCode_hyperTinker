@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.anthropic.com)",
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "WebFetch(domain:hyperliquid.gitbook.io)",
+      "Bash(tree:*)",
+      "Bash(python3:*)",
+      "Bash(source venv/bin/activate)",
+      "Bash(pip install:*)",
+      "Bash(source ../../../venv/bin/activate)",
+      "Bash(pytest:*)",
+      "Bash(./venv/bin/python -m pytest skills/hyperliquid-fetch-and-cache/tests/test_fetch_hyperliquid.py -v --tb=short -m \"not integration\")",
+      "Bash(./venv/bin/python3:*)",
+      "Bash(./venv/bin/python -m pytest:*)",
+      "Bash(python -m pytest:*)",
+      "Bash(python demo.py:*)",
+      "Bash(python:*)",
+      "Bash(source ../venv/bin/activate)",
+      "Bash(chmod:*)",
+      "Bash(cat:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
