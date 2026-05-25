@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="dawnSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a3858"/>
+      <stop offset="50%" stop-color="#6a7a98"/>
+      <stop offset="100%" stop-color="#d8c8b8"/>
+    </linearGradient>
+    <linearGradient id="coldWater" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a5a78"/>
+      <stop offset="50%" stop-color="#2a3858"/>
+      <stop offset="100%" stop-color="#0a1424"/>
+    </linearGradient>
+    <radialGradient id="warmHalo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ffb86b" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#ff7a2e" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#2a3858" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7a6240"/>
+      <stop offset="100%" stop-color="#3a2a1a"/>
+    </linearGradient>
+    <linearGradient id="dDock" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5e6e80"/>
+      <stop offset="50%" stop-color="#1d2530"/>
+      <stop offset="100%" stop-color="#070a10"/>
+    </linearGradient>
+    <radialGradient id="dHeatDock" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0%" stop-color="#ffd28a"/>
+      <stop offset="60%" stop-color="#ff7a2e"/>
+      <stop offset="100%" stop-color="#9c2c00"/>
+    </radialGradient>
+    <filter id="mistFilter"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="haloBlur"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+
+  <!-- Misty dawn sky -->
+  <rect width="1600" height="540" fill="url(#dawnSky)"/>
+
+  <!-- Distant pine tree silhouette shore -->
+  <g opacity="0.6" fill="#1a2230">
+    <path d="M 0 520 L 80 470 L 100 510 L 160 460 L 200 510 L 280 480 L 320 510 L 400 470 L 440 510 L 520 480 L 560 510 L 1600 510 L 1600 540 L 0 540 Z"/>
+  </g>
+  <g opacity="0.35" fill="#3a4654">
+    <path d="M 700 480 Q 750 460 800 480 L 800 510 L 700 510 Z"/>
+    <path d="M 1100 470 L 1150 440 L 1180 470 L 1250 450 L 1290 480 L 1100 480 Z"/>
+  </g>
+
+  <!-- Mist layer over water -->
+  <g opacity="0.55" filter="url(#mistFilter)">
+    <ellipse cx="300" cy="555" rx="500" ry="22" fill="#cfdbe6"/>
+    <ellipse cx="1100" cy="565" rx="600" ry="20" fill="#cfdbe6"/>
+    <ellipse cx="800" cy="600" rx="700" ry="18" fill="#e8dfca"/>
+  </g>
+
+  <!-- Cold water -->
+  <rect y="540" width="1600" height="360" fill="url(#coldWater)"/>
+
+  <!-- Subtle water ripples -->
+  <g stroke="#4a5a78" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="600" x2="1600" y2="600"/>
+    <line x1="0" y1="640" x2="1600" y2="640"/>
+    <line x1="0" y1="680" x2="1600" y2="680"/>
+    <line x1="0" y1="730" x2="1600" y2="730"/>
+  </g>
+
+  <!-- Dock pilings on right -->
+  <g>
+    <rect x="1450" y="500" width="14" height="280" fill="url(#wood)"/>
+    <rect x="1520" y="500" width="14" height="280" fill="url(#wood)"/>
+    <rect x="1450" y="500" width="14" height="6" fill="#1a1410"/>
+    <rect x="1520" y="500" width="14" height="6" fill="#1a1410"/>
+  </g>
+
+  <!-- Dock platform (wooden planks, perspective) -->
+  <g>
+    <path d="M 900 530 L 1600 510 L 1600 580 L 900 600 Z" fill="url(#wood)"/>
+    <!-- plank seams -->
+    <g stroke="#3a2a1a" stroke-width="1">
+      <line x1="950" y1="540" x2="1600" y2="525"/>
+      <line x1="950" y1="555" x2="1600" y2="540"/>
+      <line x1="950" y1="570" x2="1600" y2="555"/>
+      <line x1="950" y1="585" x2="1600" y2="570"/>
+    </g>
+    <!-- nails -->
+    <g fill="#1a1410">
+      <circle cx="1000" cy="548" r="1.5"/>
+      <circle cx="1200" cy="540" r="1.5"/>
+      <circle cx="1400" cy="530" r="1.5"/>
+      <circle cx="1000" cy="578" r="1.5"/>
+      <circle cx="1200" cy="568" r="1.5"/>
+      <circle cx="1400" cy="558" r="1.5"/>
+    </g>
+  </g>
+
+  <!-- Large warm halo around device in cold water -->
+  <ellipse cx="700" cy="690" rx="560" ry="200" fill="url(#warmHalo)" filter="url(#haloBlur)"/>
+
+  <!-- Ripple rings -->
+  <g stroke="#ffb86b" fill="none" stroke-width="1.6" opacity="0.7">
+    <ellipse cx="700" cy="690" rx="140" ry="30"/>
+    <ellipse cx="700" cy="690" rx="280" ry="60" opacity="0.5"/>
+    <ellipse cx="700" cy="690" rx="430" ry="100" opacity="0.3"/>
+    <ellipse cx="700" cy="690" rx="600" ry="140" opacity="0.15"/>
+  </g>
+
+  <!-- Heavy steam rising in cold air -->
+  <g opacity="0.75" filter="url(#mistFilter)">
+    <ellipse cx="640" cy="600" rx="40" ry="70" fill="#fff"/>
+    <ellipse cx="710" cy="570" rx="50" ry="100" fill="#ffe8c8"/>
+    <ellipse cx="780" cy="600" rx="35" ry="80" fill="#fff"/>
+    <ellipse cx="660" cy="530" rx="30" ry="60" fill="#fff" opacity="0.7"/>
+    <ellipse cx="740" cy="510" rx="35" ry="65" fill="#fff" opacity="0.6"/>
+    <ellipse cx="820" cy="540" rx="30" ry="55" fill="#fff" opacity="0.7"/>
+  </g>
+
+  <!-- Device clamped to dock edge, mostly submerged -->
+  <g transform="translate(610,675)">
+    <!-- Tether dropping from dock -->
+    <path d="M 130 -10 L 220 -150" stroke="#3a2a1a" stroke-width="2" fill="none"/>
+    <path d="M 130 -10 L 220 -150" stroke="#7a6240" stroke-width="0.6" fill="none" opacity="0.7"/>
+
+    <!-- Device body -->
+    <!-- submerged glow -->
+    <ellipse cx="60" cy="20" rx="180" ry="36" fill="#ff7a2e" opacity="0.6" filter="url(#haloBlur)"/>
+    <!-- rear cap -->
+    <ellipse cx="-90" cy="0" rx="10" ry="34" fill="#0a0f15"/>
+    <!-- body -->
+    <rect x="-90" y="-34" width="240" height="68" fill="url(#dDock)"/>
+    <!-- top above water highlight -->
+    <rect x="-90" y="-34" width="240" height="20" fill="#7d8b9b" opacity="0.45"/>
+    <!-- waterline darken bottom half -->
+    <rect x="-90" y="2" width="240" height="32" fill="#0a1424" opacity="0.5"/>
+    <!-- nose -->
+    <path d="M 150 -34 Q 195 -34 218 0 Q 195 34 150 34 Z" fill="url(#dDock)"/>
+    <!-- screen -->
+    <rect x="-10" y="-20" width="70" height="26" rx="3" fill="#0a0f15"/>
+    <text x="25" y="-2" text-anchor="middle" font-family="monospace" font-size="11" font-weight="700" fill="#9cf0ff">98°</text>
+    <text x="25" y="5" text-anchor="middle" font-family="monospace" font-size="3.5" fill="#5ec8e0">DOCK MODE · 47°F</text>
+    <!-- branding -->
+    <text x="-75" y="18" font-family="sans-serif" font-size="4" fill="#5e6e80" letter-spacing="2">AQUAEMBER</text>
+    <!-- vent slits -->
+    <rect x="192" y="-25" width="7" height="50" rx="1" fill="#0a0f15"/>
+    <rect x="193" y="-21" width="5" height="3" fill="url(#dHeatDock)"/>
+    <rect x="193" y="-13" width="5" height="3" fill="url(#dHeatDock)"/>
+    <rect x="193" y="-5" width="5" height="3" fill="url(#dHeatDock)"/>
+    <rect x="193" y="3" width="5" height="3" fill="url(#dHeatDock)"/>
+    <rect x="193" y="11" width="5" height="3" fill="url(#dHeatDock)"/>
+    <rect x="193" y="19" width="5" height="3" fill="url(#dHeatDock)"/>
+    <!-- LED -->
+    <circle cx="-90" cy="0" r="3" fill="#5ee0ff"/>
+    <!-- waterline -->
+    <line x1="-100" y1="0" x2="220" y2="0" stroke="#ffb86b" stroke-width="0.6" opacity="0.5"/>
+  </g>
+
+  <!-- Person in water with steaming mug, head/shoulders visible -->
+  <g transform="translate(420,720)">
+    <!-- ring of warmth around them -->
+    <ellipse cx="0" cy="20" rx="80" ry="14" fill="#ffb86b" opacity="0.35" filter="url(#mistFilter)"/>
+    <!-- shoulders submerged -->
+    <ellipse cx="0" cy="2" rx="34" ry="10" fill="#1a2840"/>
+    <!-- head -->
+    <ellipse cx="0" cy="-12" rx="14" ry="14" fill="#d8a878"/>
+    <!-- beanie hat -->
+    <path d="M -14 -16 Q 0 -32 14 -16 L 14 -10 L -14 -10 Z" fill="#c54068"/>
+    <rect x="-14" y="-12" width="28" height="3" fill="#a83358"/>
+    <!-- eyes/mouth -->
+    <ellipse cx="-4" cy="-10" rx="1" ry="1.4" fill="#1a1410"/>
+    <ellipse cx="4" cy="-10" rx="1" ry="1.4" fill="#1a1410"/>
+    <path d="M -3 -5 Q 0 -3 3 -5" stroke="#1a1410" stroke-width="0.6" fill="none"/>
+    <!-- mug -->
+    <g transform="translate(20,-4)">
+      <rect x="-6" y="-6" width="12" height="10" rx="1" fill="#cfdbe6"/>
+      <path d="M 6 -4 Q 12 -1 6 2" stroke="#cfdbe6" stroke-width="1.5" fill="none"/>
+      <!-- steam -->
+      <g opacity="0.7" filter="url(#mistFilter)">
+        <ellipse cx="0" cy="-14" rx="6" ry="10" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Towel/robe on dock edge -->
+  <g transform="translate(1200,510)">
+    <path d="M 0 0 Q 30 -20 60 0 L 70 30 Q 35 25 -5 32 Z" fill="#c54068" opacity="0.95"/>
+    <path d="M 5 5 Q 30 -10 55 5" stroke="#a83358" stroke-width="1" fill="none"/>
+  </g>
+
+  <!-- Subtle title overlay area dimming -->
+  <radialGradient id="vignette3" cx="0.5" cy="0.5" r="0.95">
+    <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0.65"/>
+  </radialGradient>
+  <rect width="1600" height="900" fill="url(#vignette3)"/>
+</svg>

@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Sky gradient: golden hour -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2540"/>
+      <stop offset="35%" stop-color="#5a3c5e"/>
+      <stop offset="65%" stop-color="#c75a3c"/>
+      <stop offset="85%" stop-color="#f0a060"/>
+      <stop offset="100%" stop-color="#ffd28a"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.7" cy="0.55" r="0.18">
+      <stop offset="0%" stop-color="#fff5d8"/>
+      <stop offset="30%" stop-color="#ffd28a"/>
+      <stop offset="80%" stop-color="#f0a060" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#c75a3c" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Water gradient -->
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a4f6e"/>
+      <stop offset="35%" stop-color="#1a2840"/>
+      <stop offset="100%" stop-color="#0a1424"/>
+    </linearGradient>
+    <!-- Glowing warm-water radius around device -->
+    <radialGradient id="warmWater" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ffb86b" stop-opacity="0.75"/>
+      <stop offset="30%" stop-color="#ff7a2e" stop-opacity="0.45"/>
+      <stop offset="70%" stop-color="#9c3a1a" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#1a2840" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Boat hull -->
+    <linearGradient id="hullWhite" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3ede0"/>
+      <stop offset="60%" stop-color="#d8cdb8"/>
+      <stop offset="100%" stop-color="#8a7e6a"/>
+    </linearGradient>
+    <linearGradient id="hullShadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a3340"/>
+      <stop offset="100%" stop-color="#0a1118"/>
+    </linearGradient>
+    <linearGradient id="deck" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c5a878"/>
+      <stop offset="100%" stop-color="#7a6240"/>
+    </linearGradient>
+    <linearGradient id="swimPlatform" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8dfca"/>
+      <stop offset="100%" stop-color="#a89878"/>
+    </linearGradient>
+
+    <!-- Device gradients (same family as hero) -->
+    <linearGradient id="dBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5e6e80"/>
+      <stop offset="50%" stop-color="#1d2530"/>
+      <stop offset="100%" stop-color="#070a10"/>
+    </linearGradient>
+    <radialGradient id="dHeat" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0%" stop-color="#ffd28a"/>
+      <stop offset="50%" stop-color="#ff7a2e"/>
+      <stop offset="100%" stop-color="#9c2c00"/>
+    </radialGradient>
+
+    <filter id="ripple">
+      <feTurbulence baseFrequency="0.02" numOctaves="2" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" scale="6"/>
+    </filter>
+    <filter id="softBlur"><feGaussianBlur stdDeviation="2"/></filter>
+    <filter id="warmBlur"><feGaussianBlur stdDeviation="20"/></filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1600" height="540" fill="url(#sky)"/>
+  <!-- Sun -->
+  <rect width="1600" height="540" fill="url(#sun)"/>
+  <!-- Distant clouds -->
+  <g opacity="0.45" fill="#f0a060">
+    <ellipse cx="350" cy="240" rx="180" ry="14"/>
+    <ellipse cx="900" cy="200" rx="220" ry="10"/>
+    <ellipse cx="1300" cy="260" rx="160" ry="12"/>
+  </g>
+  <!-- Distant land silhouette -->
+  <path d="M 0 510 Q 200 470 400 495 T 800 480 T 1200 490 T 1600 475 L 1600 540 L 0 540 Z" fill="#1a2840" opacity="0.7"/>
+
+  <!-- Water -->
+  <rect y="540" width="1600" height="360" fill="url(#water)"/>
+
+  <!-- Sun reflection on water -->
+  <g opacity="0.7">
+    <ellipse cx="1120" cy="555" rx="180" ry="6" fill="#ffd28a"/>
+    <ellipse cx="1120" cy="575" rx="140" ry="3" fill="#f0a060"/>
+    <ellipse cx="1120" cy="595" rx="100" ry="2" fill="#c75a3c"/>
+    <ellipse cx="1120" cy="615" rx="70" ry="1.5" fill="#c75a3c"/>
+  </g>
+
+  <!-- Distant horizon ripples -->
+  <g stroke="#3a4f6e" stroke-width="0.5" opacity="0.6">
+    <line x1="0" y1="555" x2="1600" y2="555"/>
+    <line x1="0" y1="570" x2="1600" y2="570"/>
+    <line x1="0" y1="590" x2="1600" y2="590"/>
+  </g>
+
+  <!-- Warm-water glow under device (large soft radial) -->
+  <ellipse cx="540" cy="720" rx="540" ry="170" fill="url(#warmWater)" filter="url(#warmBlur)"/>
+
+  <!-- Ripple rings emanating from device -->
+  <g stroke="#ffb86b" fill="none" opacity="0.55" stroke-width="1.5">
+    <ellipse cx="540" cy="720" rx="120" ry="22"/>
+    <ellipse cx="540" cy="720" rx="220" ry="42" opacity="0.4"/>
+    <ellipse cx="540" cy="720" rx="340" ry="68" opacity="0.28"/>
+    <ellipse cx="540" cy="720" rx="470" ry="96" opacity="0.15"/>
+  </g>
+
+  <!-- Steam rising above water near device -->
+  <g opacity="0.6" filter="url(#softBlur)">
+    <ellipse cx="500" cy="665" rx="22" ry="40" fill="#ffe8c8"/>
+    <ellipse cx="540" cy="645" rx="18" ry="50" fill="#ffe8c8"/>
+    <ellipse cx="580" cy="675" rx="16" ry="35" fill="#ffd28a"/>
+    <ellipse cx="510" cy="620" rx="14" ry="30" fill="#fff" opacity="0.5"/>
+  </g>
+
+  <!-- Boat (right side) - large yacht stern view -->
+  <g>
+    <!-- Reflection on water -->
+    <g opacity="0.35" transform="translate(0,1380) scale(1,-1)">
+      <path d="M 880 600 Q 900 540 1200 530 L 1560 540 L 1580 620 Q 1300 640 880 620 Z" fill="url(#hullWhite)"/>
+    </g>
+
+    <!-- Hull main -->
+    <path d="M 880 600 Q 900 540 1200 530 L 1560 540 L 1580 620 Q 1300 640 880 620 Z" fill="url(#hullWhite)"/>
+    <!-- Hull shadow underside -->
+    <path d="M 880 620 Q 1100 640 1580 620 L 1580 660 Q 1300 680 880 660 Z" fill="url(#hullShadow)"/>
+    <!-- Hull accent stripe -->
+    <path d="M 880 612 Q 1100 632 1580 612" stroke="#1a2840" stroke-width="3" fill="none"/>
+    <path d="M 880 617 Q 1100 637 1580 617" stroke="#c75a3c" stroke-width="1.5" fill="none"/>
+
+    <!-- Swim platform extending out -->
+    <path d="M 880 600 L 760 615 L 760 640 L 880 620 Z" fill="url(#swimPlatform)" stroke="#5a4a30" stroke-width="0.8"/>
+    <!-- Platform top surface (teak slats) -->
+    <g>
+      <line x1="780" y1="618" x2="870" y2="608" stroke="#5a4a30" stroke-width="0.6"/>
+      <line x1="780" y1="624" x2="870" y2="612" stroke="#5a4a30" stroke-width="0.6"/>
+      <line x1="780" y1="630" x2="870" y2="616" stroke="#5a4a30" stroke-width="0.6"/>
+    </g>
+
+    <!-- Deck above hull (cabin) -->
+    <path d="M 900 540 Q 950 480 1200 470 L 1500 480 L 1520 540 Z" fill="url(#hullWhite)" opacity="0.95"/>
+    <!-- Windows -->
+    <path d="M 940 510 L 1180 502 L 1180 522 L 940 528 Z" fill="#1a2840"/>
+    <path d="M 940 510 L 1180 502" stroke="#2a3340" stroke-width="1"/>
+    <!-- Window highlights -->
+    <path d="M 950 514 L 1170 506" stroke="#5a3c5e" stroke-width="2" opacity="0.7"/>
+
+    <!-- Boat name -->
+    <text x="1200" y="595" font-family="serif" font-style="italic" font-size="14" fill="#1a2840" opacity="0.7">— Ember Tide —</text>
+
+    <!-- Cleat -->
+    <g transform="translate(820,600)">
+      <rect x="-6" y="-4" width="12" height="6" fill="#7d8b9b" rx="1"/>
+      <ellipse cx="-6" cy="-4" rx="3" ry="2" fill="#cfdbe6"/>
+      <ellipse cx="6" cy="-4" rx="3" ry="2" fill="#cfdbe6"/>
+    </g>
+  </g>
+
+  <!-- ===== DEVICE clamped to swim platform ===== -->
+  <g transform="translate(440,665)">
+    <!-- Clamp arm going up to platform -->
+    <path d="M 0 -45 L 18 -45 L 18 -25 L -2 -10 L -10 -10 Z" fill="url(#dBody)" stroke="#070a10" stroke-width="0.6"/>
+    <rect x="-2" y="-50" width="22" height="8" fill="#9aa6b4" stroke="#1a2230" stroke-width="0.5" rx="1"/>
+
+    <!-- Device body submerged slightly, water line crosses it -->
+    <!-- Submerged half (darker, slight blue tint) -->
+    <g>
+      <ellipse cx="-110" cy="0" rx="10" ry="32" fill="#0a0f15"/>
+      <rect x="-110" y="-32" width="270" height="64" fill="url(#dBody)"/>
+      <path d="M 160 -32 Q 200 -32 220 0 Q 200 32 160 32 Z" fill="url(#dBody)"/>
+      <!-- top highlight -->
+      <rect x="-110" y="-32" width="270" height="24" fill="#5e6e80" opacity="0.4"/>
+      <!-- screen -->
+      <rect x="20" y="-18" width="60" height="24" rx="3" fill="#0a0f15"/>
+      <text x="50" y="0" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#9cf0ff">102°</text>
+      <!-- branding -->
+      <text x="-60" y="14" font-family="sans-serif" font-size="4" fill="#5e6e80" letter-spacing="2">AQUAEMBER</text>
+      <!-- vent at front -->
+      <rect x="195" y="-22" width="6" height="44" rx="1" fill="#0a0f15"/>
+      <rect x="196" y="-18" width="4" height="3" fill="url(#dHeat)"/>
+      <rect x="196" y="-10" width="4" height="3" fill="url(#dHeat)"/>
+      <rect x="196" y="-2" width="4" height="3" fill="url(#dHeat)"/>
+      <rect x="196" y="6" width="4" height="3" fill="url(#dHeat)"/>
+      <rect x="196" y="14" width="4" height="3" fill="url(#dHeat)"/>
+    </g>
+
+    <!-- Water surface line crossing device -->
+    <line x1="-130" y1="5" x2="240" y2="5" stroke="#ffb86b" stroke-width="0.6" opacity="0.5"/>
+
+    <!-- Glow at front -->
+    <ellipse cx="215" cy="0" rx="80" ry="40" fill="#ff7a2e" opacity="0.4" filter="url(#warmBlur)"/>
+  </g>
+
+  <!-- Two people enjoying the warm water near the device -->
+  <g transform="translate(220,690)">
+    <!-- Person 1 - just head/shoulders above water -->
+    <ellipse cx="0" cy="-2" rx="14" ry="8" fill="#3a2a1a"/>
+    <ellipse cx="0" cy="-8" rx="10" ry="10" fill="#d8a878"/>
+    <ellipse cx="-3" cy="-9" rx="1" ry="1.5" fill="#1a1410"/>
+    <ellipse cx="3" cy="-9" rx="1" ry="1.5" fill="#1a1410"/>
+    <path d="M -3 -5 Q 0 -3 3 -5" stroke="#1a1410" stroke-width="0.6" fill="none"/>
+    <!-- ripples around -->
+    <ellipse cx="0" cy="2" rx="22" ry="3" fill="none" stroke="#ffb86b" stroke-width="0.6" opacity="0.5"/>
+  </g>
+
+  <g transform="translate(310,705)">
+    <!-- Person 2 -->
+    <ellipse cx="0" cy="-2" rx="14" ry="8" fill="#c75a3c" opacity="0.7"/>
+    <ellipse cx="0" cy="-8" rx="10" ry="10" fill="#e8c8a0"/>
+    <path d="M -10 -14 Q 0 -22 10 -14 Q 8 -10 0 -10 Q -8 -10 -10 -14 Z" fill="#1a1410"/>
+    <ellipse cx="-3" cy="-8" rx="1" ry="1.5" fill="#1a1410"/>
+    <ellipse cx="3" cy="-8" rx="1" ry="1.5" fill="#1a1410"/>
+    <path d="M -3 -4 Q 0 -2 3 -4" stroke="#1a1410" stroke-width="0.6" fill="none"/>
+    <ellipse cx="0" cy="2" rx="22" ry="3" fill="none" stroke="#ffb86b" stroke-width="0.6" opacity="0.5"/>
+  </g>
+
+  <!-- Wine glasses on platform held by hand -->
+  <g transform="translate(810,605)" opacity="0.95">
+    <rect x="-1" y="-12" width="2" height="8" fill="#3a4654"/>
+    <ellipse cx="0" cy="-15" rx="4" ry="3" fill="#c75a3c" opacity="0.85"/>
+    <ellipse cx="0" cy="-4" rx="3" ry="0.8" fill="#3a4654"/>
+  </g>
+
+  <!-- Subtle splashes on water surface -->
+  <g opacity="0.6">
+    <circle cx="180" cy="700" r="1.5" fill="#ffd28a"/>
+    <circle cx="380" cy="730" r="1" fill="#ffd28a"/>
+    <circle cx="650" cy="710" r="2" fill="#ffd28a"/>
+    <circle cx="120" cy="740" r="1.4" fill="#ffd28a"/>
+  </g>
+
+  <!-- Caption-friendly soft vignette -->
+  <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.9">
+    <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0.6"/>
+  </radialGradient>
+  <rect width="1600" height="900" fill="url(#vignette)"/>
+</svg>

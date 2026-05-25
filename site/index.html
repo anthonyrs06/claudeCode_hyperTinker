@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AQUAEMBER M1 — Personal Marine Water Heater</title>
+<meta name="description" content="The AQUAEMBER M1 turns cold open water into a warm bubble of comfort around your boat or float. Marine-grade induction heating, battery powered, IP68." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ================== NAV ================== -->
+<nav class="top">
+  <div class="brand"><span class="dot"></span>AQUAEMBER</div>
+  <ul>
+    <li><a href="#scenes">In the wild</a></li>
+    <li><a href="#how">How it works</a></li>
+    <li><a href="#footprint">Heat footprint</a></li>
+    <li><a href="#modules">Inside</a></li>
+    <li><a href="#specs">Specs</a></li>
+  </ul>
+  <a href="#order" class="nav-cta">Reserve M1</a>
+</nav>
+
+<!-- ================== HERO ================== -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow reveal">Marine Thermal · M1</div>
+      <h1 class="hero-title reveal">
+        Warm water,<br/>
+        <span class="grad">anywhere you float.</span>
+      </h1>
+      <p class="hero-sub reveal">
+        Clamp it to your swim deck, tether it next to your float, hang it off the dock. The AQUAEMBER M1 turns a 25-foot radius of open water into a comfortable bubble — no plumbing, no shore power, no compromise.
+      </p>
+      <div class="cta-row reveal">
+        <a href="#order" class="btn btn-primary">Reserve yours · $1,890</a>
+        <a href="#how" class="btn btn-ghost">See how it works</a>
+      </div>
+    </div>
+    <div class="hero-image-wrap reveal">
+      <img src="assets/hero-device.svg" alt="AQUAEMBER M1 personal marine water heater" />
+    </div>
+  </div>
+
+  <div class="spec-strip reveal">
+    <div class="stat">
+      <div class="num">25<span class="unit">ft</span></div>
+      <div class="lbl">Warm radius</div>
+    </div>
+    <div class="stat">
+      <div class="num">102<span class="unit">°F</span></div>
+      <div class="lbl">Target temp · live: <span id="liveTemp">102.0</span>°</div>
+    </div>
+    <div class="stat">
+      <div class="num">8<span class="unit">hr</span></div>
+      <div class="lbl">Battery runtime</div>
+    </div>
+    <div class="stat">
+      <div class="num">IP68</div>
+      <div class="lbl">Submersible · marine sealed</div>
+    </div>
+  </div>
+</header>
+
+<!-- ================== SCENES ================== -->
+<section class="scenes" id="scenes">
+  <div class="container">
+    <div class="section-eyebrow reveal">In the wild</div>
+    <h2 class="section-title reveal">Designed to disappear into the moment.</h2>
+    <p class="section-sub reveal">Wherever your day ends up — golden hour off the swim platform, a Sunday flotilla, a cold-snap dock soak — the M1 just works. Quietly. Hot.</p>
+
+    <div class="scene-grid reveal">
+      <div class="scene-card wide">
+        <img src="assets/scene-boat.svg" alt="AQUAEMBER M1 clamped to a yacht swim platform at golden hour, two swimmers floating in the warm halo around the boat" />
+        <div class="meta">
+          <div class="tag">Swim deck · golden hour</div>
+          <h3>Stay in the water longer.</h3>
+          <p>Clamps to any swim platform in 30 seconds. Push the temp up while the sun goes down.</p>
+        </div>
+      </div>
+      <div class="scene-col">
+        <div class="scene-card">
+          <img src="assets/scene-float.svg" alt="The M1 tethered next to a pink flamingo pool float, gently warming the water in a backyard pool" />
+          <div class="meta">
+            <div class="tag">Pool · flotilla mode</div>
+            <h3>Tether and float.</h3>
+            <p>Drop it next to your raft — built-in flotation collar.</p>
+          </div>
+        </div>
+        <div class="scene-card">
+          <img src="assets/scene-dock.svg" alt="The M1 hung off a dock in cold dawn water, with steam rising and a swimmer in a warm halo nearby" />
+          <div class="meta">
+            <div class="tag">Dock · cold plunge reverse</div>
+            <h3>47°F outside. 98°F where you are.</h3>
+            <p>A dock-side micro-spa for shoulder season.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== HOW IT WORKS ================== -->
+<section class="how" id="how">
+  <div class="container">
+    <div class="section-eyebrow reveal">How it works</div>
+    <h2 class="section-title reveal">A 1.5 kW induction coil. A current of warm water. Repeat.</h2>
+    <p class="section-sub reveal">Cold water enters the rear convective intake, passes around a ferrite-cored induction coil heating it directly through electromagnetic flux, and exits as a slow vortex at the nose. Buoyancy carries the warm layer outward in a stable ring.</p>
+
+    <div class="cutaway-wrap reveal">
+      <img src="assets/cutaway.svg" alt="Technical cross-section of the AQUAEMBER M1 showing internal battery pack, control PCB, induction coil, and flow manifold" />
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <span class="num">STEP 01</span>
+        <h4>Cold water in</h4>
+        <p>Convective intake at the rear pulls ambient water through a fine-mesh prefilter.</p>
+      </div>
+      <div class="step reveal">
+        <span class="num">STEP 02</span>
+        <h4>Induction heat</h4>
+        <p>A 1.5 kW ferrite-cored coil transfers heat directly to the water — 96% efficient, no exposed elements.</p>
+      </div>
+      <div class="step reveal">
+        <span class="num">STEP 03</span>
+        <h4>Vortex outlet</h4>
+        <p>A spiraled nose manifold ejects heated water in a wide, slow vortex that won't sting or scald.</p>
+      </div>
+      <div class="step reveal">
+        <span class="num">STEP 04</span>
+        <h4>Closed-loop sensing</h4>
+        <p>Eight IR + thermocouple sensors map the surrounding zone and modulate output to hold your set temp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== HEAT FOOTPRINT ================== -->
+<section class="heatmap" id="footprint">
+  <div class="container">
+    <div class="heatmap-grid">
+      <div class="reveal">
+        <img src="assets/heat-map.svg" alt="Top-down thermal footprint visualization showing concentric temperature bands around the device, from 104°F at the center to 76°F at 25 feet" />
+      </div>
+      <div class="reveal">
+        <div class="section-eyebrow">Heat footprint</div>
+        <h2 class="section-title">Not a hot tub. A warm tide.</h2>
+        <p class="section-sub">The M1 doesn't try to heat the whole ocean — it engineers a stable, layered halo of warm water that drifts outward with you in it.</p>
+
+        <ul class="heat-bullets">
+          <li>
+            <div class="ico">3'</div>
+            <div class="txt">
+              <h5>Inner zone · 100–104°F</h5>
+              <p>Where you sit. Sustained even in 55°F base water.</p>
+            </div>
+          </li>
+          <li>
+            <div class="ico">8'</div>
+            <div class="txt">
+              <h5>Comfort zone · 90–98°F</h5>
+              <p>Two or three people, floating, talking, drinking something.</p>
+            </div>
+          </li>
+          <li>
+            <div class="ico">15'</div>
+            <div class="txt">
+              <h5>Soak zone · 80–88°F</h5>
+              <p>Noticeably warm — pool temperatures in open water.</p>
+            </div>
+          </li>
+          <li>
+            <div class="ico">25'</div>
+            <div class="txt">
+              <h5>Edge · 72–80°F</h5>
+              <p>The bubble's outer wall. Beyond is the real world again.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== EXPLODED MODULES ================== -->
+<section class="modules" id="modules">
+  <div class="container">
+    <div class="section-eyebrow reveal">Inside the M1</div>
+    <h2 class="section-title reveal">Six modules. Field-serviceable.</h2>
+    <p class="section-sub reveal">Every part you might ever need to touch is behind a single waterproof seal ring. We send you the spare. You keep the boat in the water.</p>
+
+    <div class="exploded-wrap reveal">
+      <img src="assets/exploded.svg" alt="Exploded view of the six core modules: end cap, power core battery, control board, induction coil, flow nose, and mount clamp" />
+    </div>
+  </div>
+</section>
+
+<!-- ================== DETAILS ================== -->
+<section class="details">
+  <div class="container">
+    <div class="section-eyebrow reveal">Details that matter</div>
+    <h2 class="section-title reveal">Built like marine hardware should be.</h2>
+
+    <div class="detail-grid">
+      <div class="detail-card reveal">
+        <div class="image">
+          <img src="assets/detail-controls.svg" alt="Close-up of the M1 control display showing 102°F with status indicators for BLE, GPS, heating, and 73% battery" />
+        </div>
+        <div class="body">
+          <div class="tag">Top surface · always above water</div>
+          <h4>One thumb. One temperature.</h4>
+          <p>Capacitive controls work with wet hands and salt spray. App-pair over BLE if you want, but you'll rarely need it.</p>
+        </div>
+      </div>
+      <div class="detail-card reveal">
+        <div class="image">
+          <img src="assets/detail-clamp.svg" alt="Close-up of the universal marine clamp with knurled tightening knob and rubber non-marring grip pads on a teak swim platform" />
+        </div>
+        <div class="body">
+          <div class="tag">Universal clamp · 0.5–2.5"</div>
+          <h4>Mounts where you already mount things.</h4>
+          <p>316L stainless. Gelcoat-safe rubber pads. Torque-limited so you can't over-tighten it onto someone's nice boat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== SPECS ================== -->
+<section class="specs" id="specs">
+  <div class="container">
+    <div class="section-eyebrow reveal">The fine print</div>
+    <h2 class="section-title reveal">Specs.</h2>
+
+    <div class="specs-table reveal">
+      <div class="specs-row"><div class="k">Heating</div><div class="v">1.5 kW <span class="accent">ferrite induction</span> — 96% transfer efficiency</div></div>
+      <div class="specs-row"><div class="k">Warm radius</div><div class="v">Up to 25 ft / 7.6 m in &gt;50°F ambient water</div></div>
+      <div class="specs-row"><div class="k">Power</div><div class="v">1.2 kWh LiFePO₄ pack · <span class="accent">8 hr</span> typical runtime · 3 hr fast-charge</div></div>
+      <div class="specs-row"><div class="k">Solar input</div><div class="v">100W MC4 — extend runtime indefinitely off-grid</div></div>
+      <div class="specs-row"><div class="k">Body</div><div class="v">Anodized 6061-T6 aluminum · 316L stainless hardware · UV-stable elastomer seals</div></div>
+      <div class="specs-row"><div class="k">Rating</div><div class="v"><span class="accent">IP68</span> · 10m submersion · ISO 12217 marine</div></div>
+      <div class="specs-row"><div class="k">Dimensions</div><div class="v">22" length × 5.5" diameter · 11.4 lb (with battery)</div></div>
+      <div class="specs-row"><div class="k">Safety</div><div class="v">IMU water-detect interlock · auto-shutoff if airborne · max surface temp limited to 110°F</div></div>
+      <div class="specs-row"><div class="k">Connectivity</div><div class="v">BLE 5.3 · Wi-Fi 6 · iOS / Android app · NMEA 2000 boat-bus optional</div></div>
+      <div class="specs-row"><div class="k">Warranty</div><div class="v">3 years comprehensive · lifetime on the clamp</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== COMPARE ================== -->
+<section class="compare">
+  <div class="container">
+    <div class="section-eyebrow reveal">Why the M1</div>
+    <h2 class="section-title reveal">The alternatives don't really exist. So we compared anyway.</h2>
+
+    <div class="compare-grid">
+      <div class="compare-card reveal">
+        <div class="lbl">OPTION A</div>
+        <h4>Heated wetsuit</h4>
+        <ul>
+          <li>You're still wet, just slightly less cold</li>
+          <li>Battery on your spine</li>
+          <li>No one else gets warm</li>
+          <li>Looks like you mean it</li>
+        </ul>
+      </div>
+      <div class="compare-card highlight reveal">
+        <div class="lbl">AQUAEMBER M1</div>
+        <h4>Personal water heater</h4>
+        <ul>
+          <li>25-foot warm halo</li>
+          <li>Three people share it comfortably</li>
+          <li>Clamps anywhere, tethers anywhere</li>
+          <li>8 hr battery, solar-extendable</li>
+          <li>Field-serviceable</li>
+        </ul>
+      </div>
+      <div class="compare-card reveal">
+        <div class="lbl">OPTION C</div>
+        <h4>Get a hot tub</h4>
+        <ul>
+          <li>It doesn't come on the boat</li>
+          <li>$15k+ installed</li>
+          <li>Chlorinated chemical soup</li>
+          <li>Your deck now has a hole in it</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== CTA ================== -->
+<section class="cta-section" id="order">
+  <div class="container">
+    <h2 class="reveal">Reserve the <span class="grad">M1</span>.<br/>Ships spring 2026.</h2>
+    <p class="reveal">$200 deposit holds your unit. Fully refundable. Color choice locks in 30 days before ship.</p>
+    <div class="cta-buttons reveal">
+      <a href="#" class="btn btn-primary">Reserve · $200 deposit</a>
+      <a href="#" class="btn btn-ghost">Talk to a human</a>
+    </div>
+    <div class="cta-trust reveal">·  3 YEAR WARRANTY  ·  FREE US SHIPPING  ·  60-DAY RETURNS  ·</div>
+  </div>
+</section>
+
+<!-- ================== FOOTER ================== -->
+<footer>
+  <div class="container">
+    <div class="brand"><span class="dot" style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ember);margin-right:8px;vertical-align:middle;"></span>AQUAEMBER · MARINE THERMAL</div>
+    <div class="links">
+      <a href="#">Press</a>
+      <a href="#">Dealers</a>
+      <a href="#">Support</a>
+      <a href="#">Manual</a>
+      <a href="#">Safety</a>
+    </div>
+    <div class="legal">© 2026 AQUAEMBER · DESIGNED IN MAINE</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

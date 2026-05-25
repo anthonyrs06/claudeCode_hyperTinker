@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <radialGradient id="clBg" cx="0.5" cy="0.5" r="0.8">
+      <stop offset="0%" stop-color="#1a2230"/>
+      <stop offset="100%" stop-color="#070a10"/>
+    </radialGradient>
+    <linearGradient id="clMetal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8eef5"/>
+      <stop offset="30%" stop-color="#9aa6b4"/>
+      <stop offset="55%" stop-color="#3a4654"/>
+      <stop offset="100%" stop-color="#0a0f15"/>
+    </linearGradient>
+    <linearGradient id="clMetalSide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3a4654"/>
+      <stop offset="50%" stop-color="#cfdbe6"/>
+      <stop offset="100%" stop-color="#1d2530"/>
+    </linearGradient>
+    <linearGradient id="clRubber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a4654"/>
+      <stop offset="100%" stop-color="#070a10"/>
+    </linearGradient>
+    <linearGradient id="clDeck" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8dfca"/>
+      <stop offset="100%" stop-color="#a89878"/>
+    </linearGradient>
+    <filter id="clShadow"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#clBg)"/>
+
+  <!-- Teak deck surface receding (perspective) -->
+  <g>
+    <path d="M -50 380 L 850 380 L 900 600 L -100 600 Z" fill="url(#clDeck)"/>
+    <!-- teak slats -->
+    <g stroke="#5a4a30" stroke-width="0.8" opacity="0.75">
+      <line x1="-50" y1="430" x2="850" y2="430"/>
+      <line x1="-50" y1="480" x2="850" y2="480"/>
+      <line x1="-50" y1="530" x2="850" y2="530"/>
+      <line x1="-50" y1="580" x2="850" y2="580"/>
+    </g>
+    <!-- subtle water film -->
+    <g opacity="0.35" fill="#a8dcf0">
+      <ellipse cx="180" cy="460" rx="40" ry="6"/>
+      <ellipse cx="500" cy="510" rx="60" ry="8"/>
+      <ellipse cx="700" cy="450" rx="30" ry="4"/>
+    </g>
+  </g>
+
+  <!-- Deck edge / fiberglass rim that clamp grabs -->
+  <g>
+    <rect x="280" y="340" width="240" height="50" fill="url(#clMetal)" opacity="0.6"/>
+    <rect x="280" y="380" width="240" height="6" fill="#1a2840"/>
+  </g>
+
+  <!-- Shadow under clamp -->
+  <ellipse cx="400" cy="400" rx="180" ry="14" fill="#000" opacity="0.5" filter="url(#clShadow)"/>
+
+  <!-- The clamp - large, isometric view -->
+  <g transform="translate(400,290)">
+    <!-- Upper jaw (sits on top of deck/platform) -->
+    <path d="M -90 0 L 90 0 L 100 30 L -100 30 Z" fill="url(#clMetal)" stroke="#070a10" stroke-width="1"/>
+    <path d="M -90 0 L 90 0 L 88 8 L -88 8 Z" fill="#cfdbe6"/>
+    <!-- machine screws on top -->
+    <g>
+      <circle cx="-60" cy="15" r="6" fill="url(#clMetalSide)" stroke="#070a10" stroke-width="0.8"/>
+      <line x1="-66" y1="15" x2="-54" y2="15" stroke="#1a2230" stroke-width="1.2"/>
+      <circle cx="60" cy="15" r="6" fill="url(#clMetalSide)" stroke="#070a10" stroke-width="0.8"/>
+      <line x1="54" y1="15" x2="66" y2="15" stroke="#1a2230" stroke-width="1.2"/>
+    </g>
+
+    <!-- Bottom jaw -->
+    <path d="M -90 75 L 90 75 L 100 95 L -100 95 Z" fill="url(#clMetal)" stroke="#070a10" stroke-width="1"/>
+    <path d="M -90 75 L 90 75 L 88 80 L -88 80 Z" fill="#cfdbe6"/>
+
+    <!-- Rubber grip pads -->
+    <path d="M -85 30 L 95 30 L 95 38 L -85 38 Z" fill="url(#clRubber)"/>
+    <path d="M -85 67 L 95 67 L 95 75 L -85 75 Z" fill="url(#clRubber)"/>
+
+    <!-- Side arm (the C-shape connector showing on right) -->
+    <path d="M 90 0 L 100 30 L 100 75 L 90 75 L 90 95 L 130 95 L 130 0 Z" fill="url(#clMetalSide)" stroke="#070a10" stroke-width="0.8"/>
+
+    <!-- AQUAEMBER logo etched -->
+    <text x="0" y="55" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#5e6e80" letter-spacing="5">AQUAEMBER</text>
+    <text x="0" y="64" text-anchor="middle" font-family="'Inter', sans-serif" font-size="5" fill="#3a4654" letter-spacing="3">MARINE-GRADE 316L · UNIVERSAL FIT 0.5–2.5"</text>
+
+    <!-- Tightening knob (right side, big knurled) -->
+    <g transform="translate(150,48)">
+      <circle cx="0" cy="0" r="32" fill="url(#clMetal)" stroke="#070a10" stroke-width="1"/>
+      <circle cx="0" cy="0" r="30" fill="none" stroke="#9aa6b4" stroke-width="0.5"/>
+      <!-- knurling teeth -->
+      <g stroke="#1a2230" stroke-width="0.8">
+        <line x1="0" y1="-32" x2="0" y2="-26"/>
+        <line x1="11" y1="-30" x2="9" y2="-24"/>
+        <line x1="22" y1="-23" x2="18" y2="-19"/>
+        <line x1="30" y1="-11" x2="25" y2="-9"/>
+        <line x1="32" y1="0" x2="26" y2="0"/>
+        <line x1="30" y1="11" x2="25" y2="9"/>
+        <line x1="22" y1="23" x2="18" y2="19"/>
+        <line x1="11" y1="30" x2="9" y2="24"/>
+        <line x1="0" y1="32" x2="0" y2="26"/>
+        <line x1="-11" y1="30" x2="-9" y2="24"/>
+        <line x1="-22" y1="23" x2="-18" y2="19"/>
+        <line x1="-30" y1="11" x2="-25" y2="9"/>
+        <line x1="-32" y1="0" x2="-26" y2="0"/>
+        <line x1="-30" y1="-11" x2="-25" y2="-9"/>
+        <line x1="-22" y1="-23" x2="-18" y2="-19"/>
+        <line x1="-11" y1="-30" x2="-9" y2="-24"/>
+      </g>
+      <circle cx="0" cy="0" r="12" fill="#1a2230" stroke="#3a4654" stroke-width="0.6"/>
+      <text x="0" y="3" text-anchor="middle" font-family="monospace" font-size="6" fill="#5e6e80">TIGHTEN</text>
+    </g>
+
+    <!-- Connection bolt to device body extending downward -->
+    <g>
+      <rect x="-10" y="95" width="20" height="40" fill="url(#clMetalSide)" stroke="#070a10" stroke-width="0.6"/>
+      <circle cx="0" cy="100" r="2" fill="#1a2230"/>
+      <circle cx="0" cy="120" r="2" fill="#1a2230"/>
+    </g>
+
+    <!-- Hint of device body below -->
+    <path d="M -30 135 Q 0 130 30 135 L 35 175 L -35 175 Z" fill="#1d2530" stroke="#070a10" stroke-width="0.6"/>
+    <rect x="-30" y="135" width="60" height="12" fill="#5e6e80" opacity="0.4"/>
+  </g>
+
+  <!-- Label callouts -->
+  <g font-family="'Inter', sans-serif" fill="#cfdbe6">
+    <g>
+      <line x1="610" y1="338" x2="700" y2="290" stroke="#5ee0ff" stroke-width="0.6"/>
+      <circle cx="610" cy="338" r="3" fill="#5ee0ff"/>
+      <text x="700" y="280" font-size="10" font-weight="600" fill="#5ee0ff">KNURLED KNOB</text>
+      <text x="700" y="294" font-size="9" fill="#9aa6b4">One-handed install,</text>
+      <text x="700" y="306" font-size="9" fill="#9aa6b4">torque-limited.</text>
+    </g>
+    <g>
+      <line x1="180" y1="320" x2="100" y2="270" stroke="#ff7a2e" stroke-width="0.6"/>
+      <circle cx="180" cy="320" r="3" fill="#ff7a2e"/>
+      <text x="50" y="258" font-size="10" font-weight="600" fill="#ff7a2e">RUBBER GRIP</text>
+      <text x="50" y="272" font-size="9" fill="#9aa6b4">Non-marring,</text>
+      <text x="50" y="284" font-size="9" fill="#9aa6b4">gelcoat-safe.</text>
+    </g>
+  </g>
+
+  <!-- Caption -->
+  <text x="400" y="50" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#5e6e80" letter-spacing="6">UNIVERSAL CLAMP · 30-SECOND INSTALL</text>
+
+  <!-- Vignette -->
+  <radialGradient id="clVig" cx="0.5" cy="0.5" r="0.85">
+    <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0.6"/>
+  </radialGradient>
+  <rect width="800" height="600" fill="url(#clVig)"/>
+</svg>

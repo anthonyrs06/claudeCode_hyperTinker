@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <radialGradient id="dcBg" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0%" stop-color="#1a2230"/>
+      <stop offset="100%" stop-color="#070a10"/>
+    </radialGradient>
+    <linearGradient id="dcShell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7d8b9b"/>
+      <stop offset="40%" stop-color="#3a4654"/>
+      <stop offset="100%" stop-color="#070a10"/>
+    </linearGradient>
+    <linearGradient id="dcScreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a141f"/>
+      <stop offset="50%" stop-color="#04080d"/>
+      <stop offset="100%" stop-color="#0a141f"/>
+    </linearGradient>
+    <radialGradient id="dcScreenGlow" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0%" stop-color="#5ee0ff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#5ee0ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="dcSoft"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="dcGlow"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#dcBg)"/>
+
+  <!-- droplets on shell -->
+  <g opacity="0.7">
+    <circle cx="120" cy="80" r="6" fill="#5ee0ff" opacity="0.25"/>
+    <circle cx="700" cy="500" r="9" fill="#5ee0ff" opacity="0.18"/>
+    <circle cx="60" cy="480" r="5" fill="#5ee0ff" opacity="0.2"/>
+  </g>
+
+  <!-- Curved surface of device close-up -->
+  <g transform="translate(400,300)">
+    <!-- background body curve -->
+    <ellipse cx="0" cy="0" rx="420" ry="180" fill="url(#dcShell)"/>
+    <ellipse cx="0" cy="-50" rx="420" ry="120" fill="#5e6e80" opacity="0.25"/>
+
+    <!-- water droplets on body -->
+    <g>
+      <ellipse cx="-200" cy="-80" rx="6" ry="4" fill="#cfdbe6" opacity="0.6"/>
+      <ellipse cx="-200" cy="-80" rx="3" ry="2" fill="#fff" opacity="0.7"/>
+      <ellipse cx="-130" cy="-110" rx="4" ry="3" fill="#cfdbe6" opacity="0.5"/>
+      <ellipse cx="240" cy="-100" rx="8" ry="6" fill="#cfdbe6" opacity="0.55"/>
+      <ellipse cx="240" cy="-100" rx="4" ry="3" fill="#fff" opacity="0.7"/>
+      <ellipse cx="180" cy="-130" rx="5" ry="4" fill="#cfdbe6" opacity="0.5"/>
+      <ellipse cx="-80" cy="120" rx="7" ry="5" fill="#cfdbe6" opacity="0.5"/>
+      <ellipse cx="100" cy="130" rx="9" ry="7" fill="#cfdbe6" opacity="0.4"/>
+      <ellipse cx="100" cy="130" rx="4" ry="3" fill="#fff" opacity="0.7"/>
+    </g>
+
+    <!-- Specular streak across top -->
+    <path d="M -380 -100 Q 0 -160 380 -100" stroke="#fff" stroke-width="2" fill="none" opacity="0.4" filter="url(#dcSoft)"/>
+
+    <!-- Display panel inset -->
+    <rect x="-180" y="-50" width="360" height="110" rx="14" fill="#0a0f15" stroke="#1d2530" stroke-width="2"/>
+    <rect x="-170" y="-42" width="340" height="94" rx="8" fill="url(#dcScreen)"/>
+    <rect x="-170" y="-42" width="340" height="94" rx="8" fill="url(#dcScreenGlow)"/>
+    <!-- Inner glow halo -->
+    <rect x="-170" y="-42" width="340" height="94" rx="8" fill="none" stroke="#5ee0ff" stroke-width="0.4" opacity="0.5"/>
+
+    <!-- Big temp -->
+    <text x="0" y="20" text-anchor="middle" font-family="'SF Mono', monospace" font-size="64" font-weight="700" fill="#9cf0ff" letter-spacing="2">102°</text>
+    <!-- subtext -->
+    <text x="0" y="44" text-anchor="middle" font-family="'SF Mono', monospace" font-size="10" fill="#5ec8e0" letter-spacing="6">HEATING · ZONE 2 · 14ft</text>
+
+    <!-- Status dots row -->
+    <g>
+      <circle cx="-150" cy="-30" r="3" fill="#5ee0ff"/>
+      <text x="-142" y="-26" font-family="'SF Mono', monospace" font-size="7" fill="#5ec8e0">BLE</text>
+      <circle cx="-100" cy="-30" r="3" fill="#5ee0ff"/>
+      <text x="-92" y="-26" font-family="'SF Mono', monospace" font-size="7" fill="#5ec8e0">GPS</text>
+      <circle cx="-50" cy="-30" r="3" fill="#ff7a2e"/>
+      <text x="-42" y="-26" font-family="'SF Mono', monospace" font-size="7" fill="#ffb86b">HEAT</text>
+      <!-- battery -->
+      <rect x="120" y="-34" width="36" height="9" rx="1" fill="none" stroke="#5ee0ff" stroke-width="0.6"/>
+      <rect x="156" y="-32" width="2" height="5" fill="#5ee0ff"/>
+      <rect x="122" y="-32" width="26" height="5" fill="#5ee0ff"/>
+      <text x="138" y="-21" text-anchor="middle" font-family="'SF Mono', monospace" font-size="7" fill="#5ec8e0">73%</text>
+    </g>
+
+    <!-- Touch button strip below screen -->
+    <g transform="translate(0,90)">
+      <rect x="-160" y="-10" width="320" height="20" rx="10" fill="#0a0f15" stroke="#1d2530" stroke-width="1"/>
+      <g>
+        <circle cx="-110" cy="0" r="6" fill="#1a2230" stroke="#3a4654" stroke-width="0.6"/>
+        <path d="M -113 0 L -107 0" stroke="#5e6e80" stroke-width="1.4"/>
+        <circle cx="-50" cy="0" r="6" fill="#1a2230" stroke="#3a4654" stroke-width="0.6"/>
+        <path d="M -53 0 L -47 0 M -50 -3 L -50 3" stroke="#5e6e80" stroke-width="1.4"/>
+        <circle cx="50" cy="0" r="6" fill="#1a2230" stroke="#3a4654" stroke-width="0.6"/>
+        <text x="50" y="2" text-anchor="middle" font-family="monospace" font-size="6" fill="#5e6e80">M</text>
+        <circle cx="110" cy="0" r="7" fill="#5ee0ff"/>
+        <circle cx="110" cy="0" r="7" fill="#5ee0ff" opacity="0.5" filter="url(#dcGlow)"/>
+        <path d="M 107 0 L 109 2 L 113 -2" stroke="#0a141f" stroke-width="1.4" fill="none"/>
+      </g>
+    </g>
+
+    <!-- AQUAEMBER subtle etched mark above panel -->
+    <text x="0" y="-78" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" fill="#5e6e80" letter-spacing="8" opacity="0.7">AQUAEMBER · M1</text>
+  </g>
+
+  <!-- Focus vignette -->
+  <radialGradient id="dcVig" cx="0.5" cy="0.5" r="0.7">
+    <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0.7"/>
+  </radialGradient>
+  <rect width="800" height="600" fill="url(#dcVig)"/>
+</svg>
