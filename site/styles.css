@@ -713,16 +713,14 @@ footer .legal {
 }
 
 /* ============================================
-   Reveal animation
+   Reveal animation — CSS-only fade-in on load
    ============================================ */
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1);
+  animation: revealIn 0.8s cubic-bezier(.2,.7,.2,1) both;
 }
-.reveal.in {
-  opacity: 1;
-  transform: translateY(0);
+@keyframes revealIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* Subtle scroll-driven shimmer line behind sections */

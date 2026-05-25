@@ -76,3 +76,4 @@ dmypy.json
 
 # Pyre
 .pyre/
+screenshots/

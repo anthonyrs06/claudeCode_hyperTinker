@@ -1,3 +1,6 @@
+// Mark body so reveal-hidden CSS only applies when JS is present
+document.body.classList.add('js');
+
 // Reveal-on-scroll
 const io = new IntersectionObserver((entries) => {
   entries.forEach((e) => {
